@@ -79,12 +79,52 @@ header, section, aside, nav, footer {
 
 header, footer {
 
-  border-top: 5px solid #a66;
+  border-top: 5px solid rgb(73, 138, 158);
 
-  border-bottom: 5px solid #a66;
+  border-bottom: 5px solid rgb(73, 138, 158);
 
 }
 
 
 
 /* WRITE YOUR CODE BELOW HERE */
+h1, p {
+  font-family: 'Ubuntu', sans-serif;
+  forced-color-adjust: rgb(71, 71, 71);
+}
+:root {
+
+  --transition-duration: 0.2s;
+  --transition-delay: 0.2s;
+}
+ 
+.menu .border {
+  transition: transform var(--transition-duration) ease-in-out;
+}
+ 
+.menu a:hover .border-top,
+.menu a:hover .border-bottom {
+  transform: scaleX(1);
+}
+ 
+.menu a:hover .border-left,
+.menu a:hover .border-right {
+  transform: scaleY(1);
+}
+ 
+.menu a:hover .border-right {
+  transition-delay: var(--transition-delay);
+}
+ 
+.menu a:hover .border-bottom {
+  transition-delay: calc(var(--transition-delay) * 2);
+}
+ 
+.menu a:hover .border-left {
+  transition-delay: calc(var(--transition-delay) * 3);
+}
+
+a:after{
+  color: blue;
+}
+
