@@ -92,36 +92,33 @@ h1, p {
   font-family: 'Ubuntu', sans-serif;
   forced-color-adjust: rgb(71, 71, 71);
 }
-:root {
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
 
-  --transition-duration: 0.2s;
-  --transition-delay: 0.2s;
+a:link {
+  color: #265301;
 }
- 
-.menu .border {
-  transition: transform var(--transition-duration) ease-in-out;
+
+a:visited {
+  color: #437A16;
 }
- 
-.menu a:hover .border-top,
-.menu a:hover .border-bottom {
-  transform: scaleX(1);
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #BAE498;
 }
- 
-.menu a:hover .border-left,
-.menu a:hover .border-right {
-  transform: scaleY(1);
+
+a:hover {
+  border-bottom: 1px solid;
+  background: #CDFEAA;
 }
- 
-.menu a:hover .border-right {
-  transition-delay: var(--transition-delay);
-}
- 
-.menu a:hover .border-bottom {
-  transition-delay: calc(var(--transition-delay) * 2);
-}
- 
-.menu a:hover .border-left {
-  transition-delay: calc(var(--transition-delay) * 3);
+
+a:active {
+  background: #265301;
+  color: #CDFEAA;
 }
 
 a:after{
